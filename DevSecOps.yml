@@ -40,11 +40,9 @@ jobs:
 
       - name: Deploy to staging
         run: |
-          # Add your deployment commands here
-          # Example: kubectl apply -f deployment-staging.yaml
+          echo "Deploy to STAGING"
 
       - name: Deploy to production
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: |
-          # Add your deployment commands here
-          # Example: kubectl apply -f deployment-production.yaml
+          echo "Deploy to PRODUCTION"
